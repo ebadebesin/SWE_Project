@@ -1,2 +1,2 @@
 # SWE_Project
-this is a wellness website
+This is a Wellness site made with HTML/CSS and JavaScript
