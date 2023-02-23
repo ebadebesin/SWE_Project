@@ -5,16 +5,22 @@ head {
 body {
     font-family: Times 'Times New Roman', Times, serif, Helvetica, sans-serif;
     text-align: left;
-    color:rgb(24, 4, 54);
-    background-color: rgba(242, 245, 248, 0.84);
+    background-color: white;
+    color: black;
     height: 125vh;  
     margin-top: 80px;  
-    padding: 30px;  
+    /* padding: 30px;   */
     background-size: cover;  
     font-family: sans-serif;  
     transition: 0.5s;
     
 }
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
 
 header {
     color: white;
@@ -38,7 +44,7 @@ header {
   }
 
   nav {
-    /* overflow: hidden; */
+    overflow: visible;
     width: 100%;
     position: fixed;
     top:0;
@@ -55,15 +61,16 @@ header {
   }
 
   nav a {
-    float: left;
+    /* float: center; caused the dropdown to cover the about section*/
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    display: block;
+    display: inline-block;
   }
   
   nav a:hover {
     background-color: rgb(58, 122, 241);
+    display: block;
   }
   
   nav img {
@@ -81,7 +88,6 @@ header {
   nav li {
     margin-right: 20px;
   }
-
 
   .dropdown {
     position: relative;
@@ -113,7 +119,7 @@ header {
   }
   
   .show {
-    display:block;
+    display: block;
   }
   
 
@@ -142,4 +148,6 @@ header {
     padding: 10px 20px;
     display: block;
   }
+
+
   
