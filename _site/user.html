@@ -8,13 +8,12 @@
 
 
 </head>
+
 <body>
   <header>
     <nav>
       <a href="/"><img src="well_logo.jpeg" height="50" width="156" /></a>
-
-
-          <a href= "index.html"><span>Home</span> </a>
+      <a href= "index.html"><span>Home</span> </a>
 
 
 <div class="dropdown">
@@ -29,26 +28,93 @@
           <a href="#service3">Service 3</a>
         </div>
       </div>
-
           <a href= "help.html"><span>Help</span></a>
           <a href= "youtube.html"><span>Youtube</span></a>
-
-
-
           <a href= "user.html"><span>User</span></a></a>
 <!--Have a user icon instead of words-->
-
 <button onclick="myFunction()" id="myButton1" value="Dark mode">Dark mode</button>
 
     </nav>
   </header>
+
   <main>
-    <h1>User/ Info/ signed in and logout at the bottom</h1>
+     
+    <h1>User</h1>
     <p>.......</p>
+
+     <div class = "container">
+        <form class="form" id="login">
+          <h1 class="form__title">Login</h1>
+          <div class="form__message form__message--error"> </div>
+          <!-- Incorrect username/password combination. 
+          This is an error message-->
+          <div class="form__input-group">
+            <input type="text" class="form__input" autofocus placeholder ="Username or email">
+            <div class="form__input--error-message"></div>
+          </div> 
+
+          <div class="form__input-group">
+            <input type="password" class="form__input" autofocus placeholder ="Password">
+            <div class="form__input-error-message"></div>
+          </div> 
+
+          <button class="form__button" type = "submit" >Continue</button>
+
+          <p class="form__text">
+            <a href="#" class="form__link">Forgot your password?</a>
+          </p>
+          <p class="form__text">
+            <a  class="form__link" href="#" id="linkCreateAccount">Don't have an Account? Create one!</a>
+          </p>
+
+
+        </form>
+
+        <form class="form form--hidden" id="createAccount">
+          <h1 class="form__title">Create Account</h1>
+          <div class="form__message form__message--error"></div>
+          <!-- Incorrect username/password combination. 
+          This is an error message-->
+          <div class="form__input-group">
+            <input type="text" id="signupUsername" class="form__input" autofocus placeholder ="Username">
+            <div class="form__input--error-message"></div>
+          </div> 
+
+          <div class="form__input-group">
+            <input type="text" class="form__input" autofocus placeholder ="Email Address">
+            <div class="form__input--error-message"></div>
+          </div> 
+
+          <div class="form__input-group">
+            <input type="password" class="form__input" autofocus placeholder ="Password">
+            <div class="form__input-error-message"></div>
+          </div> 
+
+          <div class="form__input-group">
+            <input type="text" class="form__input" autofocus placeholder ="Confirm password">
+            <div class="form__input--error-message"></div>
+          </div> 
+
+          <button class="form__button" type = "submit" >Continue</button>
+
+          <p class="form__text">
+            <a  class="form__link" href="./" id="linkLogin">Already have an Account? Sign in!</a>
+          </p>
+
+
+        </form>
+
+      </div> 
+
 
     
   </main>
+
   <footer>
+
+
+
+
     <p>Copyright 2023
 
     </p>
@@ -69,5 +135,7 @@
 
     </p>
   </footer>
+
 </body>
+
 </html>
