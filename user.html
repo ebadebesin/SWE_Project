@@ -19,9 +19,6 @@
 <div class="dropdown">
         <a href= "about.html"class="dropbtn">About</a>
 
-      
-        <!--<a href="contact.html" class="dropbtn">Services</a>-->
-
         <div class="dropdown-content">
           <a href="contact.html">Contact Us</a>
           <!-- <a href="#service2">Service 2</a>
@@ -41,9 +38,8 @@
      
     <h1>User</h1>
     <p>.......</p>
-    <button type="submit"><a href="logout.php">Logout</a></button>
-    <button type="submit"><a href="login.php">Login</a></button> 
-
+    <!-- <button type="submit"><a href="logout.php">Logout</a></button>
+    <button type="submit"><a href="login.php">Login</a></button>  -->
     <!-- <button type="submit"><a href="index.php">Login</a></button>  -->
 
      <div class = "container">
@@ -53,13 +49,13 @@
           <!-- Incorrect username/password combination. 
           This is an error message-->
           <div class="form__input-group">
-            <input type="text" class="form__input" autofocus placeholder ="Username or email">
+            <input type="text" class="form__input" autofocus placeholder ="Username or email" required>
             <div class="form__input--error-message"></div>
           </div> 
 
           <div class="form__input-group">
-            <input type="password" class="form__input" autofocus placeholder ="Password">
-            <div class="form__input-error-message"></div>
+            <input type="password" class="form__input" autofocus placeholder ="Password" required>
+            <div class="form__input--error-message"></div>
           </div> 
 
           <button class="form__button" type = "submit" >Continue</button>
@@ -80,22 +76,22 @@
           <!-- Incorrect username/password combination. 
           This is an error message-->
           <div class="form__input-group">
-            <input type="text" id="signupUsername" class="form__input" autofocus placeholder ="Username">
+            <input type="text" id="signupUsername" class="form__input" autofocus placeholder ="Username" required>
             <div class="form__input--error-message"></div>
           </div> 
 
           <div class="form__input-group">
-            <input type="text" class="form__input" autofocus placeholder ="Email Address">
+            <input type="text" class="form__input" autofocus placeholder ="Email Address" required>
             <div class="form__input--error-message"></div>
           </div> 
 
           <div class="form__input-group">
-            <input type="password" class="form__input" autofocus placeholder ="Password">
-            <div class="form__input-error-message"></div>
+            <input type="password" class="form__input" autofocus placeholder ="Password" required>
+            <div class="form__input--error-message"></div>
           </div> 
 
           <div class="form__input-group">
-            <input type="text" class="form__input" autofocus placeholder ="Confirm password">
+            <input type="text" class="form__input" autofocus placeholder ="Confirm password" required>
             <div class="form__input--error-message"></div>
           </div> 
 
@@ -109,6 +105,7 @@
         </form>
 
       </div> 
+
 
 
     
@@ -143,3 +140,13 @@
 </body>
 
 </html>
+
+<?php
+$host = "localhost";
+$port = "5432";
+$dbname = "wellweb";
+$user = "postgres";
+$password = "postgres"; 
+$connection_string = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password} ";
+$dbconn = pg_connect($connection_string);
+?>
