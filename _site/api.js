@@ -29,3 +29,4 @@ function renderError() {
   const error = document.getElementById("error");
   error.innerHTML = "Whoops, something went wrong. Please try again later!";
 }
+

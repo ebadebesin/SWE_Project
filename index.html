@@ -6,7 +6,7 @@
   <title>My Wellness Website</title>
   <link rel="stylesheet" href="style.css">
   <script src="index.js"></script>
-  
+  <script src="foodAPI.js" defer></script>
 
 </head>
 
@@ -21,7 +21,6 @@
       <div class="dropdown">
 
         <a href= "about.html"class="dropbtn">About</a>
-
       
         <!--<a href="contact.html" class="dropbtn">Services</a>-->
 
@@ -51,14 +50,29 @@
     </script> -->
 
 
-
 </nav>
 
   </header>
 
   <main>
+    <div class="searchB">
+    <form id="search-bar">
+      <label for="search">Search:</label>
+      <input type="text" name="search" id="search">
+      <button name="search_btn">Search</button>
+      <button name="reset" type="reset">Reset</button>
+    </form>
+    </div>
+
     <h1>Welcome to the Wellness Website</h1>
     <p>This is where you can find all kinds of interesting information about human wellness.
+<br>
+      <!-- <button id="button" type='button'>Get Food</button> -->
+      <!-- <p id="setup"></p>
+      <p id="punchline"></p>
+      <p id="error"></p> -->
+
+      <a href="search.html"><span>Search</span></a>
 
       <br>
       <br>
