@@ -42,7 +42,7 @@ body {
   background:#ffffff;
 }
 
-.container,
+/* .container,
 .form__input,
 .form__button {
   font: 500 1rem 'Quicksand', Times;
@@ -142,9 +142,7 @@ body {
 
 .form__link:hover{
   text-decoration: underline;
-}
-
-
+} */
 
 body.dark {
   background-color: black;
@@ -180,7 +178,7 @@ header {
     top:0;
     padding: 20;
     color: darkblue;
-    background-color: rgba(112, 193, 227, 0.806);
+    background-color: rgba(2, 151, 215, 0.923);
     display: flex;
     align-items: center;
   }
@@ -265,7 +263,7 @@ header {
     width: 100%;
     position: absolute;
     top: 300;
-    background-color: rgba(112, 193, 227, 0.806);
+    background-color: rgba(2, 151, 215, 0.923);
     display: flex;
     align-items: center;
   }
@@ -309,5 +307,6 @@ header {
   #error {
     color: #ff4d51;
   }
+
   
   

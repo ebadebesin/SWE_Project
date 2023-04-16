@@ -1,9 +1,7 @@
 function initClient() {
     gapi.load('auth2', function() {
     gapi.auth2.init({
-      client_id: '993484742540-l1ds0mvlm8pu62d54fa6q6878f2aprid.apps.googleusercontent.com',
-
-    // client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com', // Replace with your own client ID
+      client_id: '993484742540-g568052f5eqvm3t1f4u2frs4ueltgidq.apps.googleusercontent.com',  // client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com', // Replace with your own client ID
       cookiepolicy: 'single_host_origin',
       scope: 'profile email'
     }).then(function() {
