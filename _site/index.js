@@ -35,6 +35,17 @@ function myFunction() {
 
 }
 
+document.getElementById("hamburger").addEventListener("click", function () {
+    var navLinks = document.getElementById("navLinks");
+    if (navLinks.style.display === "none" || navLinks.style.display === "") {
+      navLinks.style.display = "flex";
+      navLinks.style.flexDirection = "column";
+    } else {
+      navLinks.style.display = "none";
+    }
+  });
+  
+
 function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
 
