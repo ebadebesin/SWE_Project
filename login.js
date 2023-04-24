@@ -82,35 +82,63 @@
 //   onSignIn()
 // window.addEventListener('load', onSignIn);
 
-function initGoogleAuth() {
-  // gapi.client
-  //       .init({
-  //         clientId:'993484742540-g568052f5eqvm3t1f4u2frs4ueltgidq.apps.googleusercontent.com',
-  //         scope: "email",
-  //         plugin_name:'App Name that you used in google developer console API'
-  //       })
+
+
+// function initGoogleAuth() {
+//   gapi.load('auth2', function() {
+//     gapi.auth2.init({
+//       client_id: '993484742540-g568052f5eqvm3t1f4u2frs4ueltgidq.apps.googleusercontent.com',
+//       cookiepolicy: 'single_host_origin'
+//     });
+//   });
+// }
+// initGoogleAuth();
+
+
+function initClient() {
   gapi.load('auth2', function() {
     gapi.auth2.init({
-      client_id: '993484742540-g568052f5eqvm3t1f4u2frs4ueltgidq.apps.googleusercontent.com',
-      cookiepolicy: 'single_host_origin'
+      client_id: '993484742540-g568052f5eqvm3t1f4u2frs4ueltgidq.apps.googleusercontent.com', // Replace with your own client ID
+      scope: 'profile'
+    }).then(function() {
+      const authInstance = gapi.auth2.getAuthInstance();
+      if (authInstance.isSignedIn.get()) {
+        const user = authInstance.currentUser.get();
+        displayUserName(user);
+      }
     });
   });
 }
 
-initGoogleAuth();
+window.addEventListener('load', initClient);
+
 
 function onSignIn(googleUser) {
-  // Get the user's ID token and other profile information.
-  var id_token = googleUser.getAuthResponse().id_token;
-  var profile = googleUser.getBasicProfile();
-  var name = profile.getName();
-  var email = profile.getEmail();
-  var imageUrl = profile.getImageUrl();
-  console.log(profile.email);
-  console.log(id_token);
-
-  // TODO: Send the ID token to your server for validation and to create a user session.
+  displayUserName(googleUser);
 }
+
+function displayUserName(googleUser) {
+  const profile = googleUser.getBasicProfile();
+  const userName = profile.getName();
+  const welcomeMessage = document.createElement("h2");
+  welcomeMessage.textContent = `Welcome, ${userName}!`;
+  document.body.insertBefore(welcomeMessage, document.body.firstChild);
+}
+
+
+
+// function onSignIn(googleUser) {
+//   // Get the user's ID token and other profile information.
+//   var id_token = googleUser.getAuthResponse().id_token;
+//   var profile = googleUser.getBasicProfile();
+//   var name = profile.getName();
+//   var email = profile.getEmail();
+//   var imageUrl = profile.getImageUrl();
+//   console.log(profile.email);
+//   console.log(id_token);
+
+//   // TODO: Send the ID token to your server for validation and to create a user session.
+// }
 
 function signOut() {
   var auth2 = gapi.auth2.getAuthInstance();

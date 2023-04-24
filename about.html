@@ -11,57 +11,68 @@
 <body>
   <header>
     <nav>
-
-      <a href="/"><img src="well_logo.jpeg" height="50" width="156" /></a>
-
-      <a href= "index.html"><span>Home</span> </a>
-
-      <div class="dropdown">
-        <a href= "about.html"class="dropbtn">About</a>
-
-      
-        <!--<a href="contact.html" class="dropbtn">Services</a>-->
-
-        <div class="dropdown-content">
-          <a href="contact.html">Contact Us</a>
-          <!-- <a href="#service2">Service 2</a>
-          <a href="#service3">Service 3</a> -->
-        </div>
-      </div>
-
-      
-      <a href= "help.html"><span>Help</span></a>
-
-      <div class="dropdown">
-      <a href= "youtube.html"><span>Posts</a>
-
-      <div class="dropdown-content">
-        <a href="post.html">Tiktok Posts</a>
-        <!-- <a href="#service2">Service 2</a>
-        <a href="#service3">Service 3</a> -->
-      </div>
-    </div>
-
-
-      <a href= "user.html"><span>User</span></a></a>
-<!--Have a user icon instead of words-->
-
-<button onclick="myFunction()" id="myButton1" value="Dark mode">Dark mode</button>
-
-</nav>
+      <div class="logo"><a href="/"><img src="Wellweb .png" alt="Wellness Logo" height="50" width="156" /></a></div>
+      <!-- <a href="/"><img src="well_logo.jpeg" height="50" width="156" /></a> -->
+      <ul class="nav-links"></ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+          <a href="posts.html" class="dropbtn">Posts</a>
+          <div class="dropdown-content">
+            <a href="posts.html">Posts</a>
+            <a href="tikpost.html">Tiktok Posts</a>
+            <a href="youtube.html">YouTube Posts</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="about.html" class="dropbtn">About</a>
+          <div class="dropdown-content">
+            <a href="contact.html">Contact Us</a>
+            <a href="help.html">Help</a>
+          </div>
+        </li>
+        
+        <!-- <li><a href="user.html">User</a></li> -->
+      </ul>
+      <!-- <button id="myButton1" class="btDm" onclick="myFunction()" value="Dark mode">Dark mode</button> -->
+      <button id="myButton1" class="btDm" onclick="toggleDarkMode()" value="Mode">Dark mode</button>
+      <!-- <button id="myButton1" class="btDm" onclick="toggleDarkMode()" value="Mode">Light mode</button> -->
+    </nav>
   </header>
+
   <main>
-    <h1>About</h1>
+  <!-- <section id ="Bimgs" style="background-image: url('imgs4.jpeg');"> </section> -->
+<!-- <style>
+  body{
+  background-image: url(img-8.jpg);
+  }
+</style> -->
+  
+    <!-- <h1>About</h1><a href="/"><img src="aboutWell2.jpeg" height="350" width="1250" /></a>
+    <br> -->
+    <button id= "motBut" onclick="displayQuote()">Click for a Motivational Quote</button>
+    <p id="quote"></p>
+
+    <h2>About</h2>
     <br>
     <p>The Wellness website is a platform to inspire, educate and empower natural healthy living. We wanted to 
       create a haven for all things human. Share our passion and commitment to a kind, health and sustainable life
+
+       <br>
+       <br>
+      Wellness is primarily being in good physical and mental health. Because mental health and physical health are so 
+      closely linked, problems in one area can impact the other. At the same time, improving your physical health can 
+      also benefit your mental health and other life domains, and vice versa. It is important to be aware that wellness 
+      is an intentional, ongoing and holistic approach to making healthy choices for in eight major areas of life functioning.  
       <br>
       <br>
-      <a href="/"><img src="wellpapa2.jpeg" height="300" width="350" /></a>
+      <a href="#"><img src="wellpapa2.jpeg" height="300" width="350" /></a>
+      <a href="#"><img src="aboutWell3.png" height="300" width="350" /></a>
+      <a href="#"><img src="aboutWell.jpeg" height="300" width="350" /></a>
+
       <br>
       <br>
 
-      In life, an average Human adult/ teenager needs an average of 7 – 9 hours of sleep per night and overall 
+      In life, an average Human adult/ teenager needs an average of 7 - 9 hours of sleep per night and overall 
       total wellness to be fully productive. 
       <br>
       <br>
@@ -71,6 +82,11 @@
       Individuals need steps, tips, tricks, and activities to aid physical and mental well-being.
       As people want easy access to resources to help them improve their well-being, the developer provides this 
       application as an easy, user-friendly way to access these tips, tricks, and activities.
+      <br>
+      <br>
+      <img src="yogi2.jpeg" id="yoga" height="300" width="350"/>
+      <img src="pray.jpeg" id="yoga" height="300" width="350"/>
+      <img src="exercise.png" id="yoga" height="300" width="350"/>
       <br>
       <br>
       At the heart of our mission is the belief that everyone deserves the chance to live their best life. 
@@ -98,9 +114,9 @@
 
       <p> Author: Ebun Blessing Adebesin</p>
       <br>
-    <a href="https://github.com/ebadebesin" target="_blank" >Find me on GitHub!</a>
+    <a href="https://github.com/ebadebesin" target="_blank" >Find us on GitHub!</a>
     <br>
-    <a href="https://www.linkedin.com/in/ebunoluwa-blessing-adebesin-427399192" target="_blank" >Find me on LinkedIn</a>
+    <a href="https://www.linkedin.com/in/ebunoluwa-blessing-adebesin/" target="_blank" >Find us on LinkedIn</a>
     <br>
 
     </p>
