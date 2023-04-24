@@ -33,6 +33,24 @@ function applyDarkMode() {
 
 window.addEventListener("DOMContentLoaded", applyDarkMode);
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    setActiveTab();
+  
+    function setActiveTab() {
+      const navLinks = document.querySelectorAll('.nav-links');
+      const currentPage = window.location.href;
+  
+      for (let i = 0; i < navLinks.length; i++) {
+        if (navLinks[i].href === currentPage) {
+          navLinks[i].classList.add('active');
+          break;
+        }
+      }
+    }
+  });
+  
+
 // if (isDarkModeEnabled) {
 //         darkModeToggleButton.textContent = "Light mode";
 //     } else {
