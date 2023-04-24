@@ -478,3 +478,46 @@ footer a {
 } */
 
 /* Add more dark mode styles as needed */
+.cookie-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(14, 1, 75, 0.8);
+  color: #fff;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.cookie-popup-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-popup-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cookie-popup-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.cookie-accept {
+  background-color: #4185fa;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
