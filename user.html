@@ -7,82 +7,100 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://apis.google.com/js/api:client.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <!-- Add this line in the head section of your index.html file -->
   <!-- <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script> -->
   <script src="login.js"></script>
 <script src="index.js"></script>
-<script src="cookies.js"></script>
+<script src="login2.js"></script>
 
 
 
 </head>
 
 <body>
+  <style>
+    body{
+    background-image: url(backImg.jpeg);
+    }
+  </style>
   <header>
     <nav>
-
-      <a href="/"><img src="well_logo.jpeg" height="50" width="156" /></a>
-
-      <a href= "index.html"><span>Home</span> </a>
-
-      <div class="dropdown">
-        <a href= "about.html"class="dropbtn">About</a>
-
-      
-        <!--<a href="contact.html" class="dropbtn">Services</a>-->
-
-        <div class="dropdown-content">
-          <a href="contact.html">Contact Us</a>
-          <!-- <a href="#service2">Service 2</a>
-          <a href="#service3">Service 3</a> -->
-        </div>
-      </div>
-
-      
-      <a href= "help.html"><span>Help</span></a>
-
-      <div class="dropdown">
-      <a href= "youtube.html"><span>Posts</a>
-
-      <div class="dropdown-content">
-        <a href="post.html">Tiktok Posts</a>
-        <!-- <a href="#service2">Service 2</a>
-        <a href="#service3">Service 3</a> -->
-      </div>
-    </div>
-
-
-      <a href= "user.html"><span>User</span></a></a>
-<!--Have a user icon instead of words-->
-
-<button onclick="myFunction()" id="myButton1" value="Dark mode">Dark mode</button>
-
-</nav>
+      <div class="logo"><a href="/"><img src="Wellweb .png" alt="Wellness Logo" height="50" width="156" /></a></div>
+      <!-- <a href="/"><img src="well_logo.jpeg" height="50" width="156" /></a> -->
+      <ul class="nav-links"></ul>
+      <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="about.html" class="dropbtn">About</a>
+          <div class="dropdown-content">
+            <a href="contact.html">Contact Us</a>
+            <a href="help.html">Help</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="posts.html" class="dropbtn">Posts</a>
+          <div class="dropdown-content">
+            <a href="posts.html">Posts</a>
+            <a href="tikpost.html">Tiktok Posts</a>
+            <a href="youtube.html">YouTube Posts</a>
+          </div>
+        </li>
+        <!-- <li><a href="user.html">User</a></li> -->
+      </ul>
+      <button id="myButton1" class="btDm" onclick="myFunction()" value="Dark mode">Dark mode</button>
+    </nav>
   </header>
 
   <main>
+    <img src="circle.svg" alt="circle" id="circle-1" />
+    <img src="circle.svg" alt="circle" id="circle-2" />
 
+  <div class="container">
+    <form id="signin-form">
+      <div class="row">
+      <h1>Login Manually or Sign In Google!</h1>
+      <!-- <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div> -->
+      
+      <div class="col">
+        <!-- <label for="username">Username:</label> -->
+        <input type="text" id="username" placeholder="First Name" required>
+        <!-- <label for="username">Password:</label> -->
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+      </div>
+
+    <!-- <div id="welcome-message" style="display: none;">
+      <h2>Welcome, <span id="user-display"></span>!</h2>
+      <button id="sign-out-btn">Sign Out</button>
+    </div> -->
+    <br>
+    <br>
+
+<div class="col">
   <div id="g-signin">
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="250" data-height="60"></div>
     <!-- <button id="googleSignOutBtn" style="display: none;">Sign out</button> -->
   </div>
+</div>
+      </div> 
+    </form>
+  </div>
 
-   <!-- <a href="index.html" onclick="signOut();">Sign out </a> -->
-  <!-- <script>
-    function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-        console.log('User signed out.');
-      });
-    }
-  </script> -->
+  <div class="bottom-container">
+    <div class="row">
+      <div class="col">
+        <a href="#" style="color:white" class="btn">Sign up</a>
+      </div>
+      <div class="col">
+        <a href="#" style="color:white" class="btn">Forgot password?</a>
+      </div>
+    </div>
+  </div>
 
 
-
-
-<!-- <p>Your email is: <span id="email"></span></p>
-<p>Your name is: <span id="name"></span></p> -->
   </main>
 
 

@@ -12,37 +12,34 @@
 <body>
   <header>
     <nav>
-
-      <a href="/"><img src="well_logo.jpeg" height="50" width="156" /></a>
-
-      <a href= "index.html"><span>Home</span> </a>
-
-
-     <div class="dropdown">
-        <a href= "about.html"class="dropbtn">About</a>
-
-      
-        <!--<a href="contact.html" class="dropbtn">Services</a>-->
-
-        <div class="dropdown-content">
-          <a href="contact.html">Contact Us</a>
-          <!-- <a href="#service2">Service 2</a>
-          <a href="#service3">Service 3</a> -->
-        </div>
-      </div>
-
-      <a href= "help.html"><span>Help</span></a>
-      <a href= "youtube.html"><span>Posts</span></a>
-
-
-
-      <a href= "user.html"><span>User</span></a></a>
-<!--Have a user icon instead of words-->
-
-<button onclick="myFunction()" id="myButton1" value="Dark mode">Dark mode</button>
-
-</nav>
+      <div class="logo"><a href="/"><img src="Wellweb .png" alt="Wellness Logo" height="50" width="156" /></a></div>
+      <!-- <a href="/"><img src="well_logo.jpeg" height="50" width="156" /></a> -->
+      <ul class="nav-links"></ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+          <a href="posts.html" class="dropbtn">Posts</a>
+          <div class="dropdown-content">
+            <a href="posts.html">Posts</a>
+            <a href="tikpost.html">Tiktok Posts</a>
+            <a href="youtube.html">YouTube Posts</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="about.html" class="dropbtn">About</a>
+          <div class="dropdown-content">
+            <a href="contact.html">Contact Us</a>
+            <a href="help.html">Help</a>
+          </div>
+        </li>
+        
+        <!-- <li><a href="user.html">User</a></li> -->
+      </ul>
+      <!-- <button id="myButton1" class="btDm" onclick="myFunction()" value="Dark mode">Dark mode</button> -->
+      <button id="myButton1" class="btDm" onclick="toggleDarkMode()" value="Mode">Dark mode</button>
+      <button id="myButton1" class="btDm" onclick="toggleDarkMode()" value="Mode">Light mode</button>
+    </nav>
   </header>
+
   <main>
      <h1>Help</h1>
     <!-- <h1>Help / report bug / show user manual/ contact someone</h1> -->
@@ -61,10 +58,10 @@
       <br>
       <br>
    
-      <button id="button" type='button'>Get Joke</button>
+      <!-- <button id="button" type='button'>Get Joke</button>
       <p id="setup"></p>
       <p id="punchline"></p>
-      <p id="error"></p>
+      <p id="error"></p> -->
 
       <br>
       <br>
