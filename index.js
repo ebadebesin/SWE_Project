@@ -120,6 +120,23 @@ const quotes = [
   }
   
 
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Check if the user has already accepted the cookie policy.
+    if (!localStorage.getItem('cookieAccepted')) {
+      // If not, show the cookie popup.
+      document.getElementById('cookie-popup').style.display = 'block';
+    }
+  
+    // When the user clicks the "I Agree" button, hide the popup and store their preference in localStorage.
+    document.getElementById('cookie-accept').addEventListener('click', function () {
+      document.getElementById('cookie-popup').style.display = 'none';
+      localStorage.setItem('cookieAccepted', 'true');
+    });
+    // localStorage.removeItem('cookieAccepted');
+  });
+  
+
 // function setFormMessage(formElement, type, message) {
 //     const messageElement = formElement.querySelector(".form__message");
 
