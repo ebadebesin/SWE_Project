@@ -16,6 +16,7 @@ body {
   margin-top: 80px;  
   background-size: cover;  
   transition: 0.5s;  
+
 }  
 /* background-image: url(snowy2.jpeg); */
 #circle-1 {
@@ -384,16 +385,17 @@ footer {
   padding: 3px;
   text-align: center;
   width: 100%;
-
+  overflow: visible;
   top: 300;
   background-color: rgba(2, 151, 215, 0.923);
   background-image: url("backImg.jpeg");
   display: flex;
   align-items: center;
-
-
- bottom:0;
- left:0;
+  justify-content: space-evenly;
+  position: relative;
+  bottom:0;
+  left:0;
+  right: 0;
 
 }
 
@@ -422,6 +424,33 @@ footer a {
     grid-template-columns: 1fr;
   }
 }
+/* Responsive styles for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+/* Responsive styles for mobile phones */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
 
 
 
